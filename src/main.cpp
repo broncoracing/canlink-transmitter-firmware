@@ -50,17 +50,16 @@ int main(void) {
 
       timer.reset();
 
-      led.write(1);
+      led.write(1);                                   // light LED while transmitting a packet
 
       uint8_t i = 0;
-      for (const auto &[key, value]: canData )        // iterate throught map
+      for (const auto &[key, value]: canData )        // iterate through entire map
       {
-          // build a buffer with all packets
-          // write entire buffer
-          memcpy(packetBuf + i, &value, sizeof(value));
-          i += sizeof(CANFrame);
+          memcpy(packetBuf+i, &value, sizeof(value)); // copy each CANFrame struct to the output buffer
+          i += sizeof(CANFrame);                      // manually handle iterator
       }
       xbee.write(packetBuf, sizeof(packetBuf));
+
       led.write(0);
     }
 
@@ -70,10 +69,9 @@ int main(void) {
 // Initialize with the values that we care about
 void initCanMap()
 {
-
   CANFrame dummyFrame = {0};
 
-  int numElements = sizeof(trackedCanIds) / sizeof(trackedCanIds[0]);
+  volatile int numElements = sizeof(trackedCanIds) / sizeof(trackedCanIds[0]); // make volatile for debugger viewing
   for (int i = 0; i < numElements; i++)
   {
     canData[trackedCanIds[i]] = dummyFrame;

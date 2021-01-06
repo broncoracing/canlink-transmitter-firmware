@@ -32,7 +32,6 @@
 #define AUX2_PIN            PA_5
 
 // Settings
-#define CAN_BAUD            250000
 #define XBEE_BAUD           230400
 
 // prototypes
