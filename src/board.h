@@ -3,6 +3,8 @@
 
 #include <mbed.h>
 
+// clang-format off
+
 // Pins
 
 // CAN Bus Transciever
@@ -38,3 +40,5 @@
 void initBoard();
 
 #endif //BOARD_H
+
+// clang-format on
