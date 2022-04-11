@@ -1,7 +1,7 @@
 #ifndef CANLINK_TX_H
 #define CANLINK_TX_H
 
-#include <BR_CAN_IDs.h>
+#include <CAN_IDS.h>
 #include <stdint.h>
 
 #define TRANSMIT_INTERVAL_MS 100
@@ -15,14 +15,19 @@ uint32_t trackedCanIds[] =
 
     STEERING_WHEEL_ID,
 
-    THERMOCOUPLE_1_ID,
-    THERMOCOUPLE_2_ID,
+    THERMOCOUPLE1_ID,
+    THERMOCOUPLE2_ID,
 
-    PE1_ID,
-    PE6_ID,
+    ECU1_ID,
+    ECU2_ID,
+    ECU3_ID,
 
     LAP_TIME_ID,
-    GPS_LOCATION_ID
+    GPS_LAT_ID,
+    GPS_LONG_ID,
+
+    DBW_SENSORS_ID,
+    BRAKE_PRESSURE_ID,
 };
 
 #endif //CANLINK_TX_H
