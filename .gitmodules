@@ -8,3 +8,6 @@
 [submodule "lib/can-ids"]
 	path = lib/can-ids
 	url = https://github.com/broncoracing/can-ids.git
+[submodule "Core/Src/canSerializer"]
+	path = Core/Src/canSerializer
+	url = git@github.com:zainahm3d/canSerializer.git
