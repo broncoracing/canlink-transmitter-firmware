@@ -29,7 +29,8 @@ pcb/*-backups/*
 
 # build dir
 firmware/build/*
-
+built/*
+build/
 #useless dirs
 Project\ Outputs
 Project\ Logs

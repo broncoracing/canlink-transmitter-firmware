@@ -62,6 +62,10 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN Private defines */
 
+#define TRANSMIT_INTERVAL_MS 100
+#define INTERFRAME_PERIOD_MS 8
+
+#define MAX_UNIQUE_IDS 128 // max number of unique CAN IDs to send
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
